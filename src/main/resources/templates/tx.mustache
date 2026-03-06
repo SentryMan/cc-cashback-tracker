@@ -1,0 +1,12 @@
+<tr class="border-t border-slate-100 hover:bg-slate-50 transition-colors">
+  <td class="py-3 px-4 text-sm text-slate-500">{{date}}</td>
+  <td class="py-3 px-4 font-medium text-slate-800">{{cardName}}</td>
+  <td class="py-3 px-4 text-sm text-slate-600 leading-tight">{{category}}</td>
+  <td class="py-3 px-4 font-bold text-slate-800">{{amount}}</td>
+  <td class="py-3 px-4 font-bold text-green-600">{{cashback}}</td>
+  <td class="py-3 px-4">
+    <button hx-delete="/transactions/{{id}}" hx-target="closest tr"
+            hx-swap="outerHTML swap:0.2s"
+            class="text-xs text-red-400 hover:text-red-600 font-semibold">x</button>
+  </td>
+</tr>

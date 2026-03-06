@@ -1,0 +1,12 @@
+{{#categories}}
+<div class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-slate-50 transition-colors">
+  <span class="text-sm text-slate-700 font-medium">{{name}}</span>
+  <button hx-delete="/categories/{{encodedName}}"
+          hx-target="#categories-manage-list"
+          hx-swap="innerHTML"
+          class="text-xs text-red-400 hover:text-red-600 font-bold px-2 py-0.5 rounded-lg hover:bg-red-50 transition-all">×</button>
+</div>
+{{/categories}}
+{{^categories}}
+<p class="text-sm text-slate-400 py-3 text-center bg-slate-50 rounded-xl">No categories yet. Add one above.</p>
+{{/categories}}

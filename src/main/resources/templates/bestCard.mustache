@@ -1,0 +1,16 @@
+{{#noCards}}<p class="text-slate-400 text-sm text-center py-2 bg-slate-50 rounded-xl">No cards added yet.</p>{{/noCards}}
+{{#allLimited}}
+<div class="flex items-center gap-3 p-4 bg-red-50 rounded-xl border border-red-100">
+  <div class="w-9 h-9 bg-red-100 rounded-xl flex items-center justify-center text-lg shrink-0">⚠️</div>
+  <p class="text-sm text-red-600 font-semibold">All cards have reached their reward limits.</p>
+</div>
+{{/allLimited}}
+{{#hasWinner}}
+<div class="flex items-center gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
+  <div class="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center text-lg shrink-0">🏆</div>
+  <div>
+    <p class="font-bold text-green-800">{{name}}</p>
+    <p class="text-sm text-green-600">Earns <strong>{{rate}}</strong> on {{category}}</p>
+  </div>
+</div>
+{{/hasWinner}}
