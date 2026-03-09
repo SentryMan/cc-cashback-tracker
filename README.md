@@ -16,9 +16,9 @@ A lightweight desktop app I made for myself for optimizing credit card spending.
 | HTTP server | [Avaje Jex](https://avaje.io/jex/) (Java's built-in server wrapper) |
 | Dependency injection | [Avaje Inject](https://avaje.io/inject/) |
 | JSON | [Avaje JsonB](https://avaje.io/jsonb/) |
-| Desktop window | [Avaje Webview](https://avaje.io/webview/) |
+| Desktop window | [Avaje Webview](https://github.com/avaje/avaje-webview) |
 | Frontend | HTMX + Tailwind CSS |
-| Templating | [JStachio](https://jstach.io/) (Mustache) |
+| Templating | [JStachio](https://github.com/jstachio/jstachio) (Mustache) |
 
 ## Getting Started
 
