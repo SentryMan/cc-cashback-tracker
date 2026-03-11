@@ -4,6 +4,7 @@ import cashback.AppState;
 import cashback.html.HtmlRenderer;
 import cashback.store.DataStore;
 import io.avaje.http.api.Controller;
+import io.avaje.http.api.Default;
 import io.avaje.http.api.Delete;
 import io.avaje.http.api.Form;
 import io.avaje.http.api.Get;
@@ -33,7 +34,12 @@ public class CardController {
 
   @Post
   @Form
-  void add(Context ctx, String name, String network, double fee, double rewardLimit) {
+  void add(
+      Context ctx,
+      String name,
+      String network,
+      @Default("0") double fee,
+      @Default("0") double rewardLimit) {
     if (name == null || name.isBlank()) {
       ctx.status(400);
       return;
