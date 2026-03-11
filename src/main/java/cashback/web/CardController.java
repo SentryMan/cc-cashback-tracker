@@ -11,7 +11,6 @@ import io.avaje.http.api.Get;
 import io.avaje.http.api.Post;
 import io.avaje.http.api.Produces;
 import io.avaje.jex.http.Context;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Controller("/cards")
@@ -45,17 +44,7 @@ public class CardController {
       return;
     }
 
-    Map<String, Double> rates = new LinkedHashMap<>();
-    for (var cat : state.categories()) {
-      String val = ctx.formParam("rate_" + cat.replace(" ", "_").toLowerCase());
-      if (val != null && !val.isBlank()) {
-        try {
-          rates.put(cat, Double.parseDouble(val));
-        } catch (NumberFormatException ignored) {
-        }
-      }
-    }
-    if (rates.isEmpty()) rates.put(AppState.GENERAL_CATEGORY, 1.0);
+    var rates = Map.of(AppState.GENERAL_CATEGORY, 1.0);
 
     var card = state.addCard(name, network != null ? network : "Other", fee, rewardLimit, rates);
     dataStore.save();
