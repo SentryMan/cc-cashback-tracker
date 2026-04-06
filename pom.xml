@@ -6,7 +6,7 @@
   <parent>
     <artifactId>avaje-jex-parent</artifactId>
     <groupId>io.avaje</groupId>
-    <version>3.5-RC6</version>
+    <version>3.5-RC8</version>
   </parent>
 
 	<artifactId>cashback-tracker</artifactId>
@@ -27,7 +27,7 @@
 		<dependency>
 			<groupId>io.avaje.webview</groupId>
 			<artifactId>avaje-webview-all</artifactId>
-			<version>0.15</version>
+			<version>0.17</version>
 		</dependency>
 
 		<dependency>
@@ -123,7 +123,7 @@
             <dependency>
               <groupId>com.google.googlejavaformat</groupId>
               <artifactId>google-java-format</artifactId>
-              <version>1.28.0</version>
+              <version>1.35.0</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -139,7 +139,7 @@
 					<plugin>
 						<groupId>org.graalvm.buildtools</groupId>
 						<artifactId>native-maven-plugin</artifactId>
-						<version>0.11.4</version>
+						<version>1.0.0</version>
 						<executions>
 							<execution>
 								<id>build-native</id>
